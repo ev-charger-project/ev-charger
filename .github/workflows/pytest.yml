@@ -1,0 +1,61 @@
+name: pytest
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - staging/*
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      ENV: dev
+      DB: postgresql
+      DB_USER: postgres
+      DB_PASSWORD: 1234
+      DB_HOST: localhost
+      DB_PORT: 5432
+      ES_URL: http://localhost:9200
+      ES_USERNAME: elastic
+      ES_PASSWORD: elastic@123
+      GOOGLE_MAPS_API_KEY: secret
+    strategy:
+      matrix:
+        python-version: ["3.10.11"]
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 1234
+          POSTGRES_DB: test-postgres
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+      elastic:
+        image: docker.elastic.co/elasticsearch/elasticsearch:8.14.3
+        ports:
+          - 9200:9200
+        env:
+          ELASTIC_PASSWORD: elastic@123
+          discovery.type: single-node
+          xpack.security.transport.ssl.enabled: false
+          xpack.security.http.ssl.enabled: false
+
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install poetry
+      run: pipx install poetry
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: poetry install
+
+    - name: Run tests
+      run: poetry run pytest

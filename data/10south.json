@@ -1,0 +1,1242 @@
+{
+    "items": [
+        {
+            "title": "LADWP",
+            "id": "here:pds:place:8409mgzu21rzc-aGVyZS1ldjplY29tb3ZlbWVudDoxMzY0MDg4NjIy",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "LADWP, 4022 S Pacific Ave, San Pedro, CA 90731-7129, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "S Pacific Ave",
+                "postalCode": "90731-7129",
+                "houseNumber": "4022"
+            },
+            "position": {
+                "lat": 33.70739,
+                "lng": -118.28774
+            },
+            "access": [
+                {
+                    "lat": 33.70743,
+                    "lng": -118.28774
+                }
+            ],
+            "distance": 12387,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18664840433"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.ladwp.com/ev"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "LADWP",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "lastUpdateTimestamp": "2025-05-13T17:32:17.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public"
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "ZW06N2M1MWE4YTYyNDM5MjFmMzQ1NzU5NGU0MzI0ZTg0MjY",
+                            "cpoId": "4ed2b2de-cd10-11eb-b8bb-42010a840003",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6NGVkMmIyZGUtY2QxMC0xMWViLWI4YmItNDIwMTBhODQwMDAzOjE1MjEzOQ",
+                                    "cpoId": "152139",
+                                    "state": "OTHER",
+                                    "last_updated": "2025-05-13T17:32:17.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6NGVkMmIyZGUtY2QxMC0xMWViLWI4YmItNDIwMTBhODQwMDAzOjE1MjEzOToxNTIxMzlfMA",
+                                            "cpoId": "152139_0",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:8409mgzu0nvgv-aGVyZS1ldjphZGRlbmVyZ2llOjEzNjQwNjIxMDU",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 675 Shepard St, San Pedro, CA 90731-7161, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "Shepard St",
+                "postalCode": "90731-7161",
+                "houseNumber": "675"
+            },
+            "position": {
+                "lat": 33.70707,
+                "lng": -118.29134
+            },
+            "access": [
+                {
+                    "lat": 33.70699,
+                    "lng": -118.29134
+                }
+            ],
+            "distance": 12467,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "numberOfAvailable": 0,
+                                "numberOfInUse": 1,
+                                "lastUpdateTimestamp": "2025-05-21T04:00:04.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "YWU6NWY2ZGIzZjkwYmZiYWRlOWZiMTBhOGNmMWIxMWQ1NWQ",
+                            "cpoId": "fab42068-fe76-11ec-abdb-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6ZmFiNDIwNjgtZmU3Ni0xMWVjLWFiZGItNDIwMTBhYTQwZmMwOjdiZTljN2Y3LWFhM2MtNDNhNi1hODk4LWVmOGY0OThjNDEyNg",
+                                    "cpoId": "7be9c7f7-aa3c-43a6-a898-ef8f498c4126",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10536*1",
+                                    "state": "OCCUPIED",
+                                    "last_updated": "2025-05-21T04:00:04.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6ZmFiNDIwNjgtZmU3Ni0xMWVjLWFiZGItNDIwMTBhYTQwZmMwOjdiZTljN2Y3LWFhM2MtNDNhNi1hODk4LWVmOGY0OThjNDEyNjplOGI5YmRiOC01YzJjLTA2MzEtM2Y2Ni1iZjkyNzFlYzgzMTU",
+                                            "cpoId": "e8b9bdb8-5c2c-0631-3f66-bf9271ec8315",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:evcp0-YjRkZTk4ZWMtZTgzYi0xMWVlLTg5ZGUtNDIwMTBhYTQwMGI4",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 644 W 40th St, San Pedro, CA 90731-7158, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "W 40th St",
+                "postalCode": "90731-7158",
+                "houseNumber": "644"
+            },
+            "position": {
+                "lat": 33.70792,
+                "lng": -118.29128
+            },
+            "access": [
+                {
+                    "lat": 33.70792,
+                    "lng": -118.29125
+                }
+            ],
+            "distance": 12553,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "numberOfAvailable": 1,
+                                "lastUpdateTimestamp": "2025-05-19T11:40:30.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "YjRkZTk4ZWMtZTgzYi0xMWVlLTg5ZGUtNDIwMTBhYTQwMGI4",
+                            "cpoId": "b4de98ec-e83b-11ee-89de-42010aa400b8",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6YjRkZTk4ZWMtZTgzYi0xMWVlLTg5ZGUtNDIwMTBhYTQwMGI4OjZmZDUzMDY4LTYyMTgtNDYxZS05OWJmLTU1ZTBmNjQ5Y2FjOQ",
+                                    "cpoId": "6fd53068-6218-461e-99bf-55e0f649cac9",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10825*1",
+                                    "state": "AVAILABLE",
+                                    "last_updated": "2025-05-19T11:40:30.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6YjRkZTk4ZWMtZTgzYi0xMWVlLTg5ZGUtNDIwMTBhYTQwMGI4OjZmZDUzMDY4LTYyMTgtNDYxZS05OWJmLTU1ZTBmNjQ5Y2FjOTpmYzg1NGEyNy05NDA4LTAzODktMGU0MS0wNWZkY2UyOTA4ZmE",
+                                            "cpoId": "fc854a27-9408-0389-0e41-05fdce2908fa",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "EV Charging Station",
+            "id": "here:pds:place:8409mgzu2grqq-aGVyZS1ldjplY29tb3ZlbWVudDoxMzY1Njk3MDcx",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "EV Charging Station, 3720 Stephen M White Dr, San Pedro, CA 90731-7012, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "Stephen M White Dr",
+                "postalCode": "90731-7012",
+                "houseNumber": "3720"
+            },
+            "position": {
+                "lat": 33.71146,
+                "lng": -118.28506
+            },
+            "access": [
+                {
+                    "lat": 33.71152,
+                    "lng": -118.28506
+                }
+            ],
+            "distance": 12738,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 2,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "lastUpdateTimestamp": "2023-08-30T13:14:15.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 2,
+                    "access": "public"
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "ZW06NGFhOGI1ODViMzgxYzU4YjU1NWYxYzdkZTA3ZmY5YjU",
+                            "cpoId": "298968ea-dd6f-11ec-85c5-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6Mjk4OTY4ZWEtZGQ2Zi0xMWVjLTg1YzUtNDIwMTBhYTQwZmMwOjIyMDE1NV8w",
+                                    "cpoId": "220155_0",
+                                    "state": "OTHER",
+                                    "last_updated": "2023-08-30T13:14:15.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6Mjk4OTY4ZWEtZGQ2Zi0xMWVjLTg1YzUtNDIwMTBhYTQwZmMwOjIyMDE1NV8wOjIyMDE1NV8wXzA",
+                                            "cpoId": "220155_0_0",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6Mjk4OTY4ZWEtZGQ2Zi0xMWVjLTg1YzUtNDIwMTBhYTQwZmMwOjIyMDE1NV8x",
+                                    "cpoId": "220155_1",
+                                    "state": "OTHER",
+                                    "last_updated": "2023-08-30T13:14:15.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6Mjk4OTY4ZWEtZGQ2Zi0xMWVjLTg1YzUtNDIwMTBhYTQwZmMwOjIyMDE1NV8xOjIyMDE1NV8xXzA",
+                                            "cpoId": "220155_1_0",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:8409mgzu0yfen-aGVyZS1ldjphZGRlbmVyZ2llOjEzNjQzNzQzNjA",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 667 W 37th St, San Pedro, CA 90731-6916, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "W 37th St",
+                "postalCode": "90731-6916",
+                "houseNumber": "667"
+            },
+            "position": {
+                "lat": 33.71064,
+                "lng": -118.29137
+            },
+            "access": [
+                {
+                    "lat": 33.71057,
+                    "lng": -118.29137
+                }
+            ],
+            "distance": 12840,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "numberOfAvailable": 1,
+                                "lastUpdateTimestamp": "2025-05-20T18:41:05.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "YWU6ZTcxMTYxZTgzNjVjMTYzZmY1ODhjN2I5ZDgxYzRkY2M",
+                            "cpoId": "8d4aa020-ef6f-11ed-8072-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6OGQ0YWEwMjAtZWY2Zi0xMWVkLTgwNzItNDIwMTBhYTQwZmMwOmYxOGIyMjVhLTA0OTktNGNjZi04MTM4LTAxY2YzNzYwZjgxZQ",
+                                    "cpoId": "f18b225a-0499-4ccf-8138-01cf3760f81e",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10646*1",
+                                    "state": "AVAILABLE",
+                                    "last_updated": "2025-05-20T18:41:05.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6OGQ0YWEwMjAtZWY2Zi0xMWVkLTgwNzItNDIwMTBhYTQwZmMwOmYxOGIyMjVhLTA0OTktNGNjZi04MTM4LTAxY2YzNzYwZjgxZTo2MmRiNTgxNS1mMjg5LTA5NTgtMTZjNi01MWQyMGYwMDNhMmQ",
+                                            "cpoId": "62db5815-f289-0958-16c6-51d20f003a2d",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:evcp0-NWFmYzEyMjYtZWFkNy0xMWVkLThlZTktNDIwMTBhYTQwZmMw",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 798 W 35th St, San Pedro, CA 90731-6819, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "W 35th St",
+                "postalCode": "90731-6819",
+                "houseNumber": "798"
+            },
+            "position": {
+                "lat": 33.71238,
+                "lng": -118.29132
+            },
+            "access": [
+                {
+                    "lat": 33.71244,
+                    "lng": -118.29132
+                }
+            ],
+            "distance": 13020,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "numberOfAvailable": 1,
+                                "lastUpdateTimestamp": "2025-05-20T15:37:04.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "NWFmYzEyMjYtZWFkNy0xMWVkLThlZTktNDIwMTBhYTQwZmMw",
+                            "cpoId": "5afc1226-ead7-11ed-8ee9-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6NWFmYzEyMjYtZWFkNy0xMWVkLThlZTktNDIwMTBhYTQwZmMwOmI1MGVjYmZlLTAyOWMtNDNjZS1hYzMwLWYzY2ViYzFmODc4MQ",
+                                    "cpoId": "b50ecbfe-029c-43ce-ac30-f3cebc1f8781",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10696*1",
+                                    "state": "AVAILABLE",
+                                    "last_updated": "2025-05-20T15:37:04.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6NWFmYzEyMjYtZWFkNy0xMWVkLThlZTktNDIwMTBhYTQwZmMwOmI1MGVjYmZlLTAyOWMtNDNjZS1hYzMwLWYzY2ViYzFmODc4MToyNjVlYjFiMS1mNDhjLTA2NTktM2JjZS1hM2QzODQ3ZjQ1YjI",
+                                            "cpoId": "265eb1b1-f48c-0659-3bce-a3d3847f45b2",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:8409mgzu4m1x0-aGVyZS1ldjphZGRlbmVyZ2llOjEzNjc2NjA1NDY",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 2801 Baywater Ave, San Pedro, CA 90731-6643, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "Baywater Ave",
+                "postalCode": "90731-6643",
+                "houseNumber": "2801"
+            },
+            "position": {
+                "lat": 33.71868,
+                "lng": -118.29361
+            },
+            "access": [
+                {
+                    "lat": 33.71867,
+                    "lng": -118.29373
+                }
+            ],
+            "distance": 13751,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "numberOfAvailable": 1,
+                                "lastUpdateTimestamp": "2025-05-21T02:11:05.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "YWU6NWJhODViODgwNWRhN2FiMmM2ZTc2YTdjNGEwYWUyMzY",
+                            "cpoId": "d6e04004-f038-11ed-9e43-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6ZDZlMDQwMDQtZjAzOC0xMWVkLTllNDMtNDIwMTBhYTQwZmMwOjhhMGQ3ZWU5LTBkOGItNGE0Yy04OGM3LTE0NmY0ZTA1NWJhMw",
+                                    "cpoId": "8a0d7ee9-0d8b-4a4c-88c7-146f4e055ba3",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10781*1",
+                                    "state": "AVAILABLE",
+                                    "last_updated": "2025-05-21T02:11:05.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6ZDZlMDQwMDQtZjAzOC0xMWVkLTllNDMtNDIwMTBhYTQwZmMwOjhhMGQ3ZWU5LTBkOGItNGE0Yy04OGM3LTE0NmY0ZTA1NWJhMzoxOTVkMDRhNi1mYjliLTBmZGItMWYzOS00NDcyNzY2NTk5OTA",
+                                            "cpoId": "195d04a6-fb9b-0fdb-1f39-447276659990",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:evcp0-MzY3N2MwY2UtZWM0Yi0xMWVkLTk4YTYtNDIwMTBhYTQwZmMw",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 931 W Hamilton Ave, San Pedro, CA 90731, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "W Hamilton Ave",
+                "postalCode": "90731",
+                "houseNumber": "931"
+            },
+            "position": {
+                "lat": 33.72002,
+                "lng": -118.29836
+            },
+            "access": [
+                {
+                    "lat": 33.71997,
+                    "lng": -118.29834
+                }
+            ],
+            "distance": 14044,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "numberOfAvailable": 0,
+                                "numberOfInUse": 1,
+                                "lastUpdateTimestamp": "2025-05-21T15:23:06.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "MzY3N2MwY2UtZWM0Yi0xMWVkLTk4YTYtNDIwMTBhYTQwZmMw",
+                            "cpoId": "3677c0ce-ec4b-11ed-98a6-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6MzY3N2MwY2UtZWM0Yi0xMWVkLTk4YTYtNDIwMTBhYTQwZmMwOjk5Y2M5ODAxLWM5YjAtNDE2Mi04YTVjLTgwZjNjMDdmN2IyNw",
+                                    "cpoId": "99cc9801-c9b0-4162-8a5c-80f3c07f7b27",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10846*1",
+                                    "state": "OCCUPIED",
+                                    "last_updated": "2025-05-21T15:23:06.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6MzY3N2MwY2UtZWM0Yi0xMWVkLTk4YTYtNDIwMTBhYTQwZmMwOjk5Y2M5ODAxLWM5YjAtNDE2Mi04YTVjLTgwZjNjMDdmN2IyNzowYTljZTI0ZS0zZmEwLTA0ZjUtMWRhMi1kMGVlZjgxZmI5MTQ",
+                                            "cpoId": "0a9ce24e-3fa0-04f5-1da2-d0eef81fb914",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "FLO",
+            "id": "here:pds:place:evcp0-NThmZTNjMTAtZWFkNy0xMWVkLWJmOTMtNDIwMTBhYTQwZmMw",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "FLO, 522 W 23rd St, San Pedro, CA 90731-5906, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "W 23rd St",
+                "postalCode": "90731-5906",
+                "houseNumber": "522"
+            },
+            "position": {
+                "lat": 33.72328,
+                "lng": -118.28854
+            },
+            "access": [
+                {
+                    "lat": 33.72334,
+                    "lng": -118.28854
+                }
+            ],
+            "distance": 14089,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "chains": [
+                {
+                    "id": "301859",
+                    "name": "FLO"
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18555438356"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.flo.com/"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "FLO",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "lastUpdateTimestamp": "2025-05-14T10:59:52.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public",
+                    "paymentMethods": [
+                        {
+                            "id": "operatorApp",
+                            "accepted": true
+                        }
+                    ]
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "NThmZTNjMTAtZWFkNy0xMWVkLWJmOTMtNDIwMTBhYTQwZmMw",
+                            "cpoId": "58fe3c10-ead7-11ed-bf93-42010aa40fc0",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6NThmZTNjMTAtZWFkNy0xMWVkLWJmOTMtNDIwMTBhYTQwZmMwOmZmN2MxZTRmLWNiMWEtNGFmMS1hZjMzLWQzNWI0ZThhMjJiOQ",
+                                    "cpoId": "ff7c1e4f-cb1a-4af1-af33-d35b4e8a22b9",
+                                    "cpoEvseEMI3Id": "US*FL2*EAUI-10695*1",
+                                    "state": "OTHER",
+                                    "last_updated": "2025-05-14T10:59:52.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6NThmZTNjMTAtZWFkNy0xMWVkLWJmOTMtNDIwMTBhYTQwZmMwOmZmN2MxZTRmLWNiMWEtNGFmMS1hZjMzLWQzNWI0ZThhMjJiOTo2YzJjNjQwMC0zZDBhLTBmNjYtMzhjZC04MzQ2NzZlYWUwOGE",
+                                            "cpoId": "6c2c6400-3d0a-0f66-38cd-834676eae08a",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "title": "LADWP",
+            "id": "here:pds:place:8409mgzu71rns-aGVyZS1ldjplY29tb3ZlbWVudDoxMzY4NzA1ODcx",
+            "language": "en",
+            "resultType": "place",
+            "address": {
+                "label": "LADWP, 2224 S Pacific Ave, San Pedro, CA 90731-5934, United States",
+                "countryCode": "USA",
+                "countryName": "United States",
+                "stateCode": "CA",
+                "state": "California",
+                "county": "Los Angeles",
+                "city": "San Pedro",
+                "district": "Coastal San Pedro",
+                "street": "S Pacific Ave",
+                "postalCode": "90731-5934",
+                "houseNumber": "2224"
+            },
+            "position": {
+                "lat": 33.72376,
+                "lng": -118.28779
+            },
+            "access": [
+                {
+                    "lat": 33.72376,
+                    "lng": -118.28799
+                }
+            ],
+            "distance": 14119,
+            "categories": [
+                {
+                    "id": "700-7600-0322",
+                    "name": "EV Charging Station",
+                    "primary": true
+                }
+            ],
+            "contacts": [
+                {
+                    "phone": [
+                        {
+                            "value": "+18664840433"
+                        }
+                    ],
+                    "www": [
+                        {
+                            "value": "https://www.ladwp.com/ev"
+                        }
+                    ]
+                }
+            ],
+            "openingHours": [
+                {
+                    "text": [
+                        "Mon-Sun: 00:00 - 24:00"
+                    ],
+                    "isOpen": true,
+                    "structured": [
+                        {
+                            "start": "T000000",
+                            "duration": "PT24H00M",
+                            "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                        }
+                    ]
+                }
+            ],
+            "extended": {
+                "evStation": {
+                    "connectors": [
+                        {
+                            "supplierName": "LADWP",
+                            "connectorType": {
+                                "name": "IEC 62196-2 type 1 (SAE J1772)",
+                                "id": "30"
+                            },
+                            "fixedCable": true,
+                            "maxPowerLevel": 7.2,
+                            "chargingPoint": {
+                                "numberOfConnectors": 1,
+                                "voltsRange": "240-240V AC",
+                                "phases": 1,
+                                "ampsRange": "30A",
+                                "lastUpdateTimestamp": "2025-05-13T17:32:17.000Z"
+                            }
+                        }
+                    ],
+                    "totalNumberOfConnectors": 1,
+                    "access": "public"
+                },
+                "evAvailability": {
+                    "stations": [
+                        {
+                            "id": "ZW06NjgzYjE5MGVmOWUzMzNiZTJmNzdkMTRiNTYyN2YwNWI",
+                            "cpoId": "4ec65f02-cd10-11eb-b6ac-42010a840003",
+                            "evses": [
+                                {
+                                    "id": "ZWNvbW92ZW1lbnQ6NGVjNjVmMDItY2QxMC0xMWViLWI2YWMtNDIwMTBhODQwMDAzOjE1MjEzNw",
+                                    "cpoId": "152137",
+                                    "state": "OTHER",
+                                    "last_updated": "2025-05-13T17:32:17.000Z",
+                                    "connectors": [
+                                        {
+                                            "id": "ZWNvbW92ZW1lbnQ6NGVjNjVmMDItY2QxMC0xMWViLWI2YWMtNDIwMTBhODQwMDAzOjE1MjEzNzoxNTIxMzdfMA",
+                                            "cpoId": "152137_0",
+                                            "typeId": "30",
+                                            "maxPowerLevel": 7.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

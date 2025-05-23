@@ -1,0 +1,446 @@
+{
+  "items": [
+    {
+      "title": "EVgo",
+      "id": "here:pds:place:8409q5ctqgfu6-aGVyZS1ldjplY29tb3ZlbWVudDoxNzE4NTMxMjkz",
+      "language": "en",
+      "resultType": "place",
+      "address": {
+          "label": "EVgo, 101 Judge John Aiso St, Los Angeles, CA 90012-3804, United States",
+          "countryCode": "USA",
+          "countryName": "United States",
+          "stateCode": "CA",
+          "state": "California",
+          "county": "Los Angeles",
+          "city": "Los Angeles",
+          "district": "Downtown Los Angeles",
+          "street": "Judge John Aiso St",
+          "postalCode": "90012-3804",
+          "houseNumber": "101"
+      },
+      "position": {
+          "lat": 34.05124,
+          "lng": -118.24052
+      },
+      "access": [
+          {
+              "lat": 34.05128,
+              "lng": -118.24048
+          }
+      ],
+      "distance": 312,
+      "categories": [
+          {
+              "id": "700-7600-0322",
+              "name": "EV Charging Station",
+              "primary": true
+          }
+      ],
+      "chains": [
+          {
+              "id": "25634",
+              "name": "EV Go"
+          }
+      ],
+      "contacts": [
+          {
+              "phone": [
+                  {
+                      "value": "+18774943833"
+                  }
+              ],
+              "www": [
+                  {
+                      "value": "https://www.evgo.com/"
+                  }
+              ]
+          }
+      ],
+      "openingHours": [
+          {
+              "text": [
+                  "Mon-Wed: 06:00 - 24:00",
+                  "Fri, Sat: 09:00 - 24:00",
+                  "Sun: 09:00 - 22:00"
+              ],
+              "isOpen": true,
+              "structured": [
+                  {
+                      "start": "T060000",
+                      "duration": "PT18H00M",
+                      "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE"
+                  },
+                  {
+                      "start": "T090000",
+                      "duration": "PT15H00M",
+                      "recurrence": "FREQ:DAILY;BYDAY:FR,SA"
+                  },
+                  {
+                      "start": "T090000",
+                      "duration": "PT13H00M",
+                      "recurrence": "FREQ:DAILY;BYDAY:SU"
+                  }
+              ]
+          }
+      ],
+      "extended": {
+          "evStation": {
+              "connectors": [
+                  {
+                      "supplierName": "EVgo",
+                      "connectorType": {
+                          "name": "IEC 62196-3 type 1 combo (SAE J1772)",
+                          "id": "33"
+                      },
+                      "fixedCable": true,
+                      "maxPowerLevel": 50.0,
+                      "chargingPoint": {
+                          "numberOfConnectors": 1,
+                          "voltsRange": "400-400V DC",
+                          "ampsRange": "125A",
+                          "lastUpdateTimestamp": "2025-04-30T09:02:52.000Z"
+                      }
+                  },
+                  {
+                      "supplierName": "EVgo",
+                      "connectorType": {
+                          "name": "JEVS G 105 (CHAdeMO)",
+                          "id": "29"
+                      },
+                      "fixedCable": true,
+                      "maxPowerLevel": 50.0,
+                      "chargingPoint": {
+                          "numberOfConnectors": 1,
+                          "voltsRange": "400-400V DC",
+                          "ampsRange": "125A",
+                          "lastUpdateTimestamp": "2025-04-30T09:02:52.000Z"
+                      }
+                  }
+              ],
+              "totalNumberOfConnectors": 2,
+              "access": "restricted"
+          },
+          "evAvailability": {
+              "stations": [
+                  {
+                      "id": "ZW06Yjg1ODYyMzkzZDc2NTA4NTY0YzMxZmRkODFmNGY0OTg",
+                      "cpoId": "725deb04-a8e1-11eb-a874-42010a840003",
+                      "evses": [
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6NzI1ZGViMDQtYThlMS0xMWViLWE4NzQtNDIwMTBhODQwMDAzOjg5MDYx",
+                              "cpoId": "89061",
+                              "cpoEvseEMI3Id": "US*EVG*E85001*1",
+                              "state": "OTHER",
+                              "last_updated": "2025-04-30T09:02:52.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6NzI1ZGViMDQtYThlMS0xMWViLWE4NzQtNDIwMTBhODQwMDAzOjg5MDYxOjg5MDYx",
+                                      "cpoId": "89061",
+                                      "typeId": "33",
+                                      "maxPowerLevel": 50.0
+                                  },
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6NzI1ZGViMDQtYThlMS0xMWViLWE4NzQtNDIwMTBhODQwMDAzOjg5MDYxOjg5MDYy",
+                                      "cpoId": "89062",
+                                      "typeId": "29",
+                                      "maxPowerLevel": 50.0
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      }
+    },
+    {
+      "title": "EV Connect",
+      "id": "here:pds:place:evcp0-ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAz",
+      "language": "en",
+      "resultType": "place",
+      "address": {
+          "label": "EV Connect, 300 S Spring St, Los Angeles, CA 90013-1230, United States",
+          "countryCode": "USA",
+          "countryName": "United States",
+          "stateCode": "CA",
+          "state": "California",
+          "county": "Los Angeles",
+          "city": "Los Angeles",
+          "district": "Downtown Los Angeles",
+          "street": "S Spring St",
+          "postalCode": "90013-1230",
+          "houseNumber": "300"
+      },
+      "position": {
+          "lat": 34.04931,
+          "lng": -118.24668
+      },
+      "access": [
+          {
+              "lat": 34.04907,
+              "lng": -118.24631
+          }
+      ],
+      "distance": 423,
+      "categories": [
+          {
+              "id": "700-7600-0322",
+              "name": "EV Charging Station",
+              "primary": true
+          }
+      ],
+      "contacts": [
+          {
+              "phone": [
+                  {
+                      "value": "+18887800062"
+                  }
+              ],
+              "www": [
+                  {
+                      "value": "https://www.evconnect.com/"
+                  }
+              ]
+          }
+      ],
+      "openingHours": [
+          {
+              "text": [
+                  "Mon-Sun: 00:00 - 24:00"
+              ],
+              "isOpen": true,
+              "structured": [
+                  {
+                      "start": "T000000",
+                      "duration": "PT24H00M",
+                      "recurrence": "FREQ:DAILY;BYDAY:MO,TU,WE,TH,FR,SA,SU"
+                  }
+              ]
+          }
+      ],
+      "extended": {
+          "evStation": {
+              "connectors": [
+                  {
+                      "supplierName": "EV Connect",
+                      "connectorType": {
+                          "name": "IEC 62196-2 type 1 (SAE J1772)",
+                          "id": "30"
+                      },
+                      "fixedCable": true,
+                      "maxPowerLevel": 7.2,
+                      "chargingPoint": {
+                          "numberOfConnectors": 12,
+                          "voltsRange": "240-240V AC",
+                          "phases": 1,
+                          "ampsRange": "30A",
+                          "numberOfAvailable": 4,
+                          "numberOfInUse": 2,
+                          "numberOfOutOfService": 6,
+                          "lastUpdateTimestamp": "2025-05-20T08:03:23.000Z"
+                      }
+                  }
+              ],
+              "totalNumberOfConnectors": 12,
+              "access": "restricted",
+              "paymentMethods": [
+                  {
+                      "id": "operatorApp",
+                      "accepted": true
+                  }
+              ]
+          },
+          "evAvailability": {
+              "stations": [
+                  {
+                      "id": "ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAz",
+                      "cpoId": "e590a1a0-cd0f-11eb-b63b-42010a840003",
+                      "evses": [
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1Ng",
+                              "cpoId": "6334036a769d34776391fd56",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD56",
+                              "state": "AVAILABLE",
+                              "last_updated": "2025-05-19T23:19:59.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1NjpjZTViYjI2Ni00MWRmLTQyMGQtODY2Ny1mNGQ3NmFhODkyNTY",
+                                      "cpoId": "ce5bb266-41df-420d-8667-f4d76aa89256",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1Yg",
+                              "cpoId": "6334036a769d34776391fd5b",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD5B",
+                              "state": "OUT_OF_SERVICE",
+                              "last_updated": "2025-05-14T09:00:24.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1Yjo4YTZiMjlmZC0wN2YxLTQ0NTgtOWZhYi1lM2ZhOGZjNjNiZTA",
+                                      "cpoId": "8a6b29fd-07f1-4458-9fab-e3fa8fc63be0",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1NA",
+                              "cpoId": "6334036a769d34776391fd54",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD54",
+                              "state": "OUT_OF_SERVICE",
+                              "last_updated": "2025-05-14T09:00:24.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1NDowY2I2ODFhNS1kN2YwLTRjMjAtYjJiYS02MTYyNGM3ZTc4Njk",
+                                      "cpoId": "0cb681a5-d7f0-4c20-b2ba-61624c7e7869",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1YQ",
+                              "cpoId": "6334036a769d34776391fd5a",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD5A",
+                              "state": "OCCUPIED",
+                              "last_updated": "2025-05-20T08:03:23.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1YTpjOWU4NzkzYy1lYzY4LTRjM2EtYTBiMy1iYzY3MTBjNDNhZmU",
+                                      "cpoId": "c9e8793c-ec68-4c3a-a0b3-bc6710c43afe",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1NQ",
+                              "cpoId": "6334036a769d34776391fd55",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD55",
+                              "state": "AVAILABLE",
+                              "last_updated": "2025-05-19T23:10:42.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1NTo0Y2Q5ZjBjMi1hZjU2LTRhMDMtYTQ3MC1mNTllMTg3NTczZDI",
+                                      "cpoId": "4cd9f0c2-af56-4a03-a470-f59e187573d2",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1OA",
+                              "cpoId": "6334036a769d34776391fd58",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD58",
+                              "state": "AVAILABLE",
+                              "last_updated": "2025-05-08T09:55:44.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1ODo3MDk1MGQyZC1hN2UxLTQ1ZmQtOTIxMi1jM2RiNzhmNmRlNzA",
+                                      "cpoId": "70950d2d-a7e1-45fd-9212-c3db78f6de70",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1Mw",
+                              "cpoId": "6334036a769d34776391fd53",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD53",
+                              "state": "OUT_OF_SERVICE",
+                              "last_updated": "2025-05-14T09:00:24.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1MzpmMjQ0ZDczZC00OGQ1LTQxOGYtYWQyYi00MmM2NWY5NWJhMGE",
+                                      "cpoId": "f244d73d-48d5-418f-ad2b-42c65f95ba0a",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1OQ",
+                              "cpoId": "6334036a769d34776391fd59",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD59",
+                              "state": "OCCUPIED",
+                              "last_updated": "2025-05-20T08:03:22.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1OTo3Nzc0OTEzNS0yNWZiLTQ5YTAtOWIyZC1jNGEwYzJkMjMzMGM",
+                                      "cpoId": "77749135-25fb-49a0-9b2d-c4a0c2d2330c",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1Nw",
+                              "cpoId": "6334036a769d34776391fd57",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD57",
+                              "state": "AVAILABLE",
+                              "last_updated": "2025-05-08T09:55:44.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1NzpiMjUxOGI0ZC0wY2JlLTRhZGUtOTdlZC1lNjQxM2I3MzgwYzY",
+                                      "cpoId": "b2518b4d-0cbe-4ade-97ed-e6413b7380c6",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1ZA",
+                              "cpoId": "6334036a769d34776391fd5d",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD5D",
+                              "state": "OUT_OF_SERVICE",
+                              "last_updated": "2024-11-27T08:59:31.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1ZDpmMjBiMjBmNi0wMWU1LTQzNzEtYmUxMy00MWQ5NDUyYWJlMzA",
+                                      "cpoId": "f20b20f6-01e5-4371-be13-41d9452abe30",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1ZQ",
+                              "cpoId": "6334036a769d34776391fd5e",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD5E",
+                              "state": "OUT_OF_SERVICE",
+                              "last_updated": "2024-11-27T08:59:31.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1ZToxYTQ3MTdlYS02NWZhLTQ4NjEtOTZjMC04NGQ5YTVmMDdiMmE",
+                                      "cpoId": "1a4717ea-65fa-4861-96c0-84d9a5f07b2a",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          },
+                          {
+                              "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1Yw",
+                              "cpoId": "6334036a769d34776391fd5c",
+                              "cpoEvseEMI3Id": "US*EVC*E6334036A769D34776391FD5C",
+                              "state": "OUT_OF_SERVICE",
+                              "last_updated": "2024-11-27T08:59:31.000Z",
+                              "connectors": [
+                                  {
+                                      "id": "ZWNvbW92ZW1lbnQ6ZTU5MGExYTAtY2QwZi0xMWViLWI2M2ItNDIwMTBhODQwMDAzOjYzMzQwMzZhNzY5ZDM0Nzc2MzkxZmQ1YzpkZDJkY2NhZi02ZTk5LTQzMTYtYTZhNy0wMDI5MjhhNTFjMWY",
+                                      "cpoId": "dd2dccaf-6e99-4316-a6a7-002928a51c1f",
+                                      "typeId": "30",
+                                      "maxPowerLevel": 7.2
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      }
+    }
+  ]
+}
