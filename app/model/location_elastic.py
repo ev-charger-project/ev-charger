@@ -6,6 +6,7 @@ from app.constant.enum.location_access import LocationAccess
 
 class LocationElastic(BaseModel):
     id: Optional[str]
+    here_id: Optional[str]
     external_id: Optional[str]
     location_name: str
     latitude: float
@@ -39,6 +40,7 @@ mapping = {
         "properties": {
             "location": {"type": "geo_point"},
             "id": {"type": "keyword"},
+            "here_id": {"type": "keyword"},
             "external_id": {"type": "keyword"},
             "location_name": {"type": "text"},
             "latitude": {"type": "double"},

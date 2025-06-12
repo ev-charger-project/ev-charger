@@ -14,6 +14,7 @@ if TYPE_CHECKING:
 class EVCharger(BaseModel, table=True):
     location_id: UUID = Field(nullable=False, foreign_key="location.id")
     location: "Location" = Relationship(back_populates="ev_chargers")
+    here_id: str = Field(nullable=False, max_length=255, unique=True)
     station_name: str | None = Field(nullable=True)
     cpo_id: str | None = Field(nullable=True, max_length=255)
     cpo_evse_emi3_id: str | None = Field(nullable=True, max_length=255)

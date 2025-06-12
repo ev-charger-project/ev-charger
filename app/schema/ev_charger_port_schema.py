@@ -11,7 +11,7 @@ from app.util.schema import AllOptional
 
 class _BaseEVChargerPort(BaseModel):
     model_config = ConfigDict(from_attributes=True)
-
+    here_id: str
     power_plug_type_id: uuid.UUID
     power_output_id: uuid.UUID
     ev_charger_id: uuid.UUID

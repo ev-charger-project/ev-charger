@@ -19,19 +19,24 @@ class EVChargerService(BaseService):
 
     def add(self, schema):
         rs = self.ev_charger_repository.create(schema)
+        # If rs is a tuple (ev_charger, ports), unpack it
+        if isinstance(rs, tuple):
+            ev_charger = rs[0]
+        else:
+            ev_charger = rs
 
         charger_types = self.__get_ev_charger_port_details(
-            ev_charger_ports=rs.ev_charger_ports
+            ev_charger_ports=ev_charger.ev_charger_ports
         )
 
         self.es_repository.add_charger_type_and_power_output(
             configs.ES_LOCATION_INDEX,
-            rs.location_id,
+            ev_charger.location_id,
             charger_types,
             number_of_station=1,
         )
 
-        return rs
+        return ev_charger
 
     def patch(self, id: str, schema):
         ev_charger, ports = self.ev_charger_repository.update(id, schema)

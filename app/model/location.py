@@ -16,6 +16,7 @@ if TYPE_CHECKING:
 
 
 class Location(BaseModel, table=True):
+    here_id: str = Field(nullable=False, max_length=255, unique=True)
     external_id: str | None = Field(nullable=False, max_length=255)
     location_name: str = Field(nullable=False, max_length=100)
     street: str = Field(nullable=False, max_length=255)

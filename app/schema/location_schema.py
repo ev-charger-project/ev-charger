@@ -21,6 +21,7 @@ if TYPE_CHECKING:
 class _BaseLocation(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
+    here_id: str
     external_id: str
     location_name: str
     street: str
