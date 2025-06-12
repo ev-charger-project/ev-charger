@@ -18,7 +18,6 @@ class TokenManager:
 
     def is_token_valid(self):
         # Consider token valid if it expires in more than 2 minutes
-        print(f"Expiry time: {self.token_expiry}")
         return self.token and (self.token_expiry - time.time() > 120)
 
     def get_token(self):

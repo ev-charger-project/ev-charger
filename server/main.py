@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import logging
 from apscheduler.schedulers.background import BackgroundScheduler
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -19,6 +20,24 @@ from app.constant.enum.location import Country
 from app.core.config import configs
 from app.model.amenities import Amenities
 from app.constant.enum.location_access import LocationAccess
+
+
+os.makedirs("logs", exist_ok=True)  # Ensure logs directory exists
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+    filename="logs/server.log",
+    filemode="a",
+)
+
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s %(levelname)s %(name)s %(message)s")
+console.setFormatter(formatter)
+logging.getLogger().addHandler(console)
+
+logger = logging.getLogger(__name__)
 
 
 def fetch_ev_data():
@@ -57,9 +76,10 @@ def scheduled_job(
             power_plug_type_service,
             power_output_service,
         )
-        print("Fetched and upserted EV data.")
+        logger.info("Scheduled job completed successfully.")
     except Exception as e:
-        print("Error in scheduled job:", e)
+        logger.error(f"Error during scheduled job: {e}", exc_info=True)
+        raise e
 
 
 if __name__ == "__main__":
@@ -116,11 +136,11 @@ if __name__ == "__main__":
         minutes=min,
     )
     scheduler.start()
-    print(f"Scheduler started with interval: {min} minutes.")
+    logger.info(f"Scheduler started with interval of {min} minutes.")
 
     try:
         while True:
             time.sleep(60)
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown()
-        print("Scheduler stopped.")
+        logger.info("Scheduler stopped.")

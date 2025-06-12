@@ -7,6 +7,24 @@ from app.core.config import configs
 from app.core.container import Container
 from app.util.class_object import singleton
 
+import logging
+import os
+
+os.makedirs("logs", exist_ok=True)  # Ensure logs directory exists
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+    filename="logs/app.log",
+    filemode="a",
+)
+
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s %(levelname)s %(name)s %(message)s")
+console.setFormatter(formatter)
+logging.getLogger().addHandler(console)
+
 
 @singleton
 class AppCreator:

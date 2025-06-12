@@ -190,15 +190,14 @@ class LocationRepository(BaseRepository):
             )
             if existing_location:
                 logger.info(
-                    f"Location with here_id {schema.here_id} already exists. Updating it."
+                    f"Updating existing location with here_id {schema.here_id}."
                 )
-                print(f"Updating existing location with here_id {schema.here_id}")
                 # Update the existing location with the new data
                 return self.update(existing_location.id, schema)
 
         # If not, create a new location
         logger.info(f"Creating new location with here_id {schema.here_id}")
-        print(f"Creating new location with here_id {schema.here_id}")
+
         with self.session_factory() as session:
             location = Location(
                 **schema.model_dump(exclude={"working_days", "amenities_id"}),
@@ -221,7 +220,7 @@ class LocationRepository(BaseRepository):
                 session.add_all(amentities_list)
                 session.commit()
 
-            print(f"Location created with id: {location.id}")
+            logger.info(f"Location with here_id {schema.here_id} created successfully.")
             return self.read_by_id(location.id.__str__())
 
     def update(self, id: str, schema: CreateEditLocation):
@@ -301,7 +300,7 @@ class LocationRepository(BaseRepository):
                 )
                 session.commit()
 
-            print(f"Location updated with id: {id}")
+            logger.info(f"Location with id {id} updated successfully.")
             return self.read_by_id(id)
 
     def _delete_amenities_by_list_id(self, id_list):

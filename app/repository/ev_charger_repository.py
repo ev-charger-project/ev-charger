@@ -72,11 +72,10 @@ class EVChargerRepository(BaseRepository):
             )
             if existing_ev_charger:
                 logger.info(
-                    f"EV charger with ID {schema.here_id} already exists. Updating it."
+                    f"Updating existing EV charger with ID {existing_ev_charger.id}."
                 )
                 # return self.read_by_id(existing_ev_charger.id.__str__())
                 # Update the existing EV charger with the new data
-                print(f"Updating existing EV charger with ID {existing_ev_charger.id}.")
                 return self.update(existing_ev_charger.id.__str__(), schema)
                 # session.commit()
                 # session.refresh(existing_ev_charger)
@@ -111,7 +110,6 @@ class EVChargerRepository(BaseRepository):
 
             # If it doesn't exist, create a new one
             logger.info(f"Creating new EV charger with ID {schema.here_id}.")
-            print(f"Creating new EV charger with ID {schema.here_id}.")
             ev_charger = EVCharger(**schema.model_dump(exclude={"ev_charger_ports"}))
 
             session.add(ev_charger)
@@ -127,7 +125,7 @@ class EVChargerRepository(BaseRepository):
                 session.add_all(port_list)
                 session.commit()
 
-            print(f"Created EV charger with ID {ev_charger.id}.")
+            logger.info(f"Created EV charger with ID {ev_charger.id}.")
             return self.read_by_id(ev_charger.id.__str__())
 
     def _delete_ports_by_list_id(self, id_list):
@@ -167,9 +165,7 @@ class EVChargerRepository(BaseRepository):
         with self.session_factory() as session:
             ev_charger = self.read_by_id(id)
             ports = ev_charger.ev_charger_ports
-            print(f"ports: {ports}")
             upsert_ports = schema.ev_charger_ports
-            print(f"upsert_ports: {upsert_ports}")
             deleted_port = [
                 port
                 for port in ports
@@ -208,6 +204,5 @@ class EVChargerRepository(BaseRepository):
                 }
             )
             session.commit()
-            print(f"Updated EV charger with ID {id}.")
-
+            logger.info(f"Updated EV charger with ID {id}.")
             return self.read_by_id(id), ports
