@@ -130,22 +130,27 @@ class LocationService(BaseService):
             **location.model_dump(exclude={"id"}),
             location=f"{location.latitude}, {location.longitude}",
         )
-        # self.es_repository.create_document(
-        #     index_name=configs.ES_LOCATION_INDEX,
-        #     doc_id=str(location.id),
-        #     body={
-        #         **location_elastic.model_dump(exclude={"ev_chargers", "working_days", "location_amenities"}),
-        #         "working_days": [
-        #             {
-        #                 "day": wd.day,
-        #                 "open_time": wd.open_time.strftime(configs.TIME_FORMAT),
-        #                 "close_time": wd.close_time.strftime(configs.TIME_FORMAT),
-        #             }
-        #             for wd in schema.working_days
-        #         ],
-        #         "amenities": [location_amenities.amenities.amenities_types for location_amenities in location.location_amenities],
-        #     },
-        # )
+        self.es_repository.create_document(
+            index_name=configs.ES_LOCATION_INDEX,
+            doc_id=str(location.id),
+            body={
+                **location_elastic.model_dump(
+                    exclude={"ev_chargers", "working_days", "location_amenities"}
+                ),
+                "working_days": [
+                    {
+                        "day": wd.day,
+                        "open_time": wd.open_time.strftime(configs.TIME_FORMAT),
+                        "close_time": wd.close_time.strftime(configs.TIME_FORMAT),
+                    }
+                    for wd in schema.working_days
+                ],
+                "amenities": [
+                    location_amenities.amenities.amenities_types
+                    for location_amenities in location.location_amenities
+                ],
+            },
+        )
 
         return location
 

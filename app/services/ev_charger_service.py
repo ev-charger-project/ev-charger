@@ -24,7 +24,12 @@ class EVChargerService(BaseService):
             ev_charger_ports=rs.ev_charger_ports
         )
 
-        # self.es_repository.add_charger_type_and_power_output(configs.ES_LOCATION_INDEX, rs.location_id, charger_types, number_of_station=1)
+        self.es_repository.add_charger_type_and_power_output(
+            configs.ES_LOCATION_INDEX,
+            rs.location_id,
+            charger_types,
+            number_of_station=1,
+        )
 
         return rs
 
