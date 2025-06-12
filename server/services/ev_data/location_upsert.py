@@ -16,10 +16,7 @@ sys.path.append(root_dir)
 # Import necessary modules from the app
 from app.constant.enum.location import Country
 from app.core.config import configs
-from app.model.amenities import Amenities
 from app.constant.enum.location_access import LocationAccess
-from app.schema.location_schema import WorkingDay
-from app.schema.location_schema import CreateEditLocation
 
 
 def get_enum_value(enum_cls, value, default=None):
@@ -37,6 +34,7 @@ def get_enum_value(enum_cls, value, default=None):
 
 
 def parse_opening_hours(opening_hours_json):
+    from app.schema.location_schema import WorkingDay
 
     working_days = []
     if not opening_hours_json:
@@ -90,6 +88,7 @@ def parse_opening_hours(opening_hours_json):
 
 
 def create_locations_from_data(location_service, data: dict):
+    from app.schema.location_schema import CreateEditLocation
 
     created_locations = []
 

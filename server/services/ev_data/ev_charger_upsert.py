@@ -8,9 +8,6 @@ sys.path.append(root_dir)
 
 from app.constant.enum.availability import AvailabilityEnum
 from app.constant.enum.power_plug_type import PowerModel
-from app.schema.ev_charger_schema import CreateEVCharger, CreatePort
-from app.schema.power_plug_type_schema import CreatePowerPlugType
-from app.schema.power_output_schema import CreatePowerOutput
 
 
 def create_ev_chargers_from_data(
@@ -19,6 +16,9 @@ def create_ev_chargers_from_data(
     power_plug_type_service,
     power_output_service,
 ):
+    from app.schema.ev_charger_schema import CreateEVCharger, CreatePort
+    from app.schema.power_plug_type_schema import CreatePowerPlugType
+    from app.schema.power_output_schema import CreatePowerOutput
 
     for location, item in locations_and_items:
         extended = item.get("extended", {})

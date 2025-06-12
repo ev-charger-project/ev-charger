@@ -44,11 +44,19 @@ def create_ev_chargers(
     )
 
 
-def scheduled_job():
+def scheduled_job(
+    location_service, ev_charger_service, power_plug_type_service, power_output_service
+):
     try:
         data = fetch_ev_data()
-        locations_and_items = create_locations(data)
-        create_ev_chargers(locations_and_items)
+        locations_and_items = create_locations(data, location_service)
+        # print(f"locations_and_items:\n {locations_and_items}")
+        create_ev_chargers(
+            locations_and_items,
+            ev_charger_service,
+            power_plug_type_service,
+            power_output_service,
+        )
         print("Fetched and upserted EV data.")
     except Exception as e:
         print("Error in scheduled job:", e)
@@ -95,9 +103,18 @@ if __name__ == "__main__":
     ev_charger_repository = EVChargerRepository(session_factory)
     ev_charger_service = EVChargerService(ev_charger_repository, es_repository)
 
-    min = os.getenv("MINUTE_INTERVAL", "1")
+    min = int(os.getenv("MINUTE_INTERVAL", "1"))
     scheduler = BackgroundScheduler()
-    scheduler.add_job(scheduled_job, "interval", minutes=min)
+    scheduler.add_job(
+        lambda: scheduled_job(
+            location_service=location_service,
+            ev_charger_service=ev_charger_service,
+            power_plug_type_service=power_plug_type_service,
+            power_output_service=power_output_service,
+        ),
+        "interval",
+        minutes=min,
+    )
     scheduler.start()
     print(f"Scheduler started with interval: {min} minutes.")
 
