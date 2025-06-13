@@ -24,7 +24,7 @@ class _BaseLocation(BaseModel):
     here_id: str
     external_id: str
     location_name: str
-    street: str
+    street: str | None = None
     house_number: str | None = None
     district: str | None = None
     city: str
@@ -142,12 +142,13 @@ class CreateEditLocation(_BaseLocation):
         return v
 
     @field_validator("street")
-    def validate_street(cls, v: str) -> str:
-        if v.__len__() < 1 or v is None:
-            raise ValueError("Street address is required.")
-        if v.__len__() > 255:
-            raise ValueError("Street address must not exceed 255 characters.")
-        return v
+    def validate_street(cls, v: str | None) -> str:
+        # if v.__len__() < 1 or v is None:
+        #     raise ValueError("Street address is required.")
+        if v is not None:
+            if v.__len__() > 255:
+                raise ValueError("Street address must not exceed 255 characters.")
+            return v
 
     @field_validator("district")
     def validate_district(cls, v: str | None) -> str:

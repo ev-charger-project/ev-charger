@@ -9,7 +9,9 @@ from app.util.schema import AllOptional
 
 class _BasePowerPlugType(BaseModel):
     model_config = ConfigDict(from_attributes=True)
-    supplier_name: str = Field(description="Name of the supplier")
+    supplier_name: Optional[str] = Field(
+        description="Name of the supplier", default=None
+    )
     power_model: PowerModel
     plug_type: str = Field(description="Type of power plug")
     plug_type_id: str = Field(description="ID of the power plug type")

@@ -7,13 +7,17 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from elasticsearch import Elasticsearch
 
+
 # Add the root directory to the Python path
 root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(root_dir)
 
-from server.services.here_api import get_here_ev_data
+from server.services.here.here_api import get_here_ev_data
 from server.services.ev_data.location_upsert import create_locations_from_data
 from server.services.ev_data.ev_charger_upsert import create_ev_chargers_from_data
+from server.services.here.here_grid_fetch import (
+    fetch_and_upsert_la_ev_data,
+)
 
 
 from app.constant.enum.location import Country
@@ -67,11 +71,8 @@ def scheduled_job(
     location_service, ev_charger_service, power_plug_type_service, power_output_service
 ):
     try:
-        data = fetch_ev_data()
-        locations_and_items = create_locations(data, location_service)
-        # print(f"locations_and_items:\n {locations_and_items}")
-        create_ev_chargers(
-            locations_and_items,
+        fetch_and_upsert_la_ev_data(
+            location_service,
             ev_charger_service,
             power_plug_type_service,
             power_output_service,
@@ -123,7 +124,8 @@ if __name__ == "__main__":
     ev_charger_repository = EVChargerRepository(session_factory)
     ev_charger_service = EVChargerService(ev_charger_repository, es_repository)
 
-    min = int(os.getenv("MINUTE_INTERVAL", "1"))
+    # min = int(os.getenv("MINUTE_INTERVAL", "10"))
+    min = 1
     scheduler = BackgroundScheduler()
     scheduler.add_job(
         lambda: scheduled_job(
