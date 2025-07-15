@@ -7,7 +7,7 @@ if TYPE_CHECKING:
 
 
 class PowerPlugType(BaseModel, table=True):
-    supplier_name: str = Field(nullable=False)
+    supplier_name: str = Field(nullable=True)
     power_model: str = Field(nullable=False)
     plug_type: str = Field(nullable=False)
     plug_type_id: str = Field(nullable=False)

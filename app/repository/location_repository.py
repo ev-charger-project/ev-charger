@@ -1,6 +1,7 @@
 from contextlib import AbstractContextManager
 from datetime import datetime
 from typing import Callable
+import logging
 
 from sqlalchemy import and_, delete, insert, not_, or_, select, update
 from sqlalchemy.exc import IntegrityError
@@ -27,6 +28,8 @@ from app.schema.location_schema import (
 )
 from app.util.pagination import paginate
 from app.util.query_builder import dict_to_sqlalchemy_filter_options
+
+logger = logging.getLogger(__name__)
 
 
 class LocationRepository(BaseRepository):
@@ -178,6 +181,23 @@ class LocationRepository(BaseRepository):
             return rs
 
     def create(self, schema: CreateEditLocation):
+        # Check if location with the same here_id already exists, if so, update it
+        with self.session_factory() as session:
+            existing_location = (
+                session.query(Location)
+                .filter(Location.here_id == schema.here_id)
+                .first()
+            )
+            if existing_location:
+                logger.info(
+                    f"Updating existing location with here_id {schema.here_id}."
+                )
+                # Update the existing location with the new data
+                return self.update(existing_location.id, schema)
+
+        # If not, create a new location
+        logger.info(f"Creating new location with here_id {schema.here_id}")
+
         with self.session_factory() as session:
             location = Location(
                 **schema.model_dump(exclude={"working_days", "amenities_id"}),
@@ -199,6 +219,8 @@ class LocationRepository(BaseRepository):
                 ]
                 session.add_all(amentities_list)
                 session.commit()
+
+            logger.info(f"Location with here_id {schema.here_id} created successfully.")
             return self.read_by_id(location.id.__str__())
 
     def update(self, id: str, schema: CreateEditLocation):
@@ -278,6 +300,7 @@ class LocationRepository(BaseRepository):
                 )
                 session.commit()
 
+            logger.info(f"Location with id {id} updated successfully.")
             return self.read_by_id(id)
 
     def _delete_amenities_by_list_id(self, id_list):

@@ -3,6 +3,7 @@ name = "ev-charger"
 version = "1.0.0"
 description = ""
 readme = "README.md"
+authors = ["denda0duong <101461266+denda0duong@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10.11"
@@ -22,6 +23,7 @@ elasticsearch = "^8.14.0"
 requests = "^2.32.3"
 python-jose = "^3.3.0"
 geopandas = "^1.0.1"
+apscheduler = "^3.10.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "8.2.2"
