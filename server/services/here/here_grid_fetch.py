@@ -29,20 +29,9 @@ def generate_grid(center_lat, center_lon, lat_range, lon_range, step_km):
     return grid
 
 
-# def fetch_here_ev_data_at(lat, lon, radius_km):
-#     return get_here_ev_data(lat=lat, lon=lon, radius_km=radius_km)
-
-
-# def fetch_all_la_ev_data():
-#     grid = generate_grid(CENTER_LAT, CENTER_LON, LAT_RANGE, LON_RANGE, STEP_KM)
-#     all_items = {}
-#     for lat, lon in grid:
-#         data = fetch_here_ev_data_at(lat, lon, RADIUS_KM)
-#         for item in data.get("items", []):
-#             ext_id = item.get("id")
-#             if ext_id not in all_items:
-#                 all_items[ext_id] = item
-#     return {"items": list(all_items.values())}
+MAX_ITEMS_PER_CELL = 100
+MIN_RADIUS_KM = 2
+SUBDIVISION_DELTAS = [-0.25, 0, 0.25]
 
 
 def fetch_and_upsert_la_ev_data(
@@ -77,10 +66,10 @@ def fetch_and_upsert_la_ev_data(
             power_output_service,
         )
         # If dense, subdivide
-        if len(items) >= 100 and radius_km > 2:
+        if len(items) >= MAX_ITEMS_PER_CELL and radius_km > MIN_RADIUS_KM:
             logger.info(f"Subdividing cell at ({lat},{lon}), r={radius_km}km")
-            for dlat in [-0.25, 0, 0.25]:
-                for dlon in [-0.25, 0, 0.25]:
+            for dlat in SUBDIVISION_DELTAS:
+                for dlon in SUBDIVISION_DELTAS:
                     if dlat == 0 and dlon == 0:
                         continue
                     process_cell(
