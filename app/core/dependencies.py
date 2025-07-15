@@ -6,6 +6,9 @@ from pydantic import ValidationError
 
 from app.core.exceptions import AuthError
 from app.core.security import JWTBearer, decode_jwt
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @inject
@@ -15,7 +18,7 @@ def validate_token(
 
     try:
         payload = decode_jwt(token)
-        print("Decoded payload:", payload)  # Debugging line
+        logger.debug("Decoded payload: %s", payload)  # Debugging line
 
         if not payload:  # decode_jwt returns {} or None if invalid
             raise AuthError(detail="Could not validate credentials")

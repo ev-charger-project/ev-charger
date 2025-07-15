@@ -6,6 +6,9 @@ from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
 from app.core.config import configs
 from app.core.exceptions import AuthError
+import logging
+
+logger = logging.getLogger(__name__)
 
 ALGORITHM = "HS256"
 
@@ -33,7 +36,7 @@ def decode_jwt(token: str) -> dict:
             else None
         )
     except jwt.InvalidSignatureError as e:
-        print(f"JWT Invalid Signature error: {e}")
+        logger.error(f"JWT Invalid Signature error: {e}")
         return {}
     except jwt.ExpiredSignatureError as e:
         print(f"JWT Expired Signature error: {e}")

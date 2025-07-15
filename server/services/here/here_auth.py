@@ -10,6 +10,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+DEFAULT_TOKEN_EXPIRY_SECONDS = 86400  # Default to 24 hours
+
 
 class TokenManager:
     # Define a named constant for token expiry buffer
@@ -21,7 +23,9 @@ class TokenManager:
 
     def is_token_valid(self):
         # Consider token valid if it expires in more than TOKEN_EXPIRY_BUFFER_SECONDS
-        return self.token and (self.token_expiry - time.time() > self.TOKEN_EXPIRY_BUFFER_SECONDS)
+        return self.token and (
+            self.token_expiry - time.time() > self.TOKEN_EXPIRY_BUFFER_SECONDS
+        )
 
     def get_token(self):
         if self.is_token_valid():
@@ -79,7 +83,9 @@ class TokenManager:
         response.raise_for_status()
         data = response.json()
         token = data["access_token"]
-        expires_in = data.get("expires_in", 86400)  # Default to 24 hours
+        expires_in = data.get(
+            "expires_in", DEFAULT_TOKEN_EXPIRY_SECONDS
+        )  # Default to 24 hours
         expiry_time = time.time() + int(expires_in)
         return token, expiry_time
 

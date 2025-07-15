@@ -1,13 +1,9 @@
-import json
 import os
 import sys
 import datetime
 import re
 import logging
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, scoped_session
-from elasticsearch import Elasticsearch
 
 # Add the root directory to the Python path
 root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -19,6 +15,9 @@ from app.core.config import configs
 from app.constant.enum.location_access import LocationAccess
 
 logger = logging.getLogger(__name__)
+
+MIDNIGHT = datetime.time(0, 0, 0)
+ALMOST_MIDNIGHT = datetime.time(23, 59, 59)
 
 
 def get_enum_value(enum_cls, value, default=None):
@@ -79,8 +78,8 @@ def parse_opening_hours(opening_hours_json):
             logger.debug(f"close_time: {close_time}")
 
             # If close_time is exactly midnight, set to 23:59:59
-            if close_time == datetime.time(0, 0, 0):
-                close_time = datetime.time(23, 59, 59)
+            if close_time == MIDNIGHT:
+                close_time = ALMOST_MIDNIGHT
                 logger.debug(f"close_time adjusted to: {close_time}")
             for day in days:
                 working_days.append(

@@ -143,8 +143,8 @@ class CreateEditLocation(_BaseLocation):
 
     @field_validator("street")
     def validate_street(cls, v: str | None) -> str:
-        # if v.__len__() < 1 or v is None:
-        #     raise ValueError("Street address is required.")
+        # The validation logic for checking if the street address is required has been removed.
+        # If needed in the future, it can be reintroduced based on specific requirements.
         if v is not None:
             if v.__len__() > 255:
                 raise ValueError("Street address must not exceed 255 characters.")
