@@ -12,13 +12,16 @@ load_dotenv()
 
 
 class TokenManager:
+    # Define a named constant for token expiry buffer
+    TOKEN_EXPIRY_BUFFER_SECONDS = 120
+
     def __init__(self):
         self.token = None
         self.token_expiry = 0  # Unix timestamp
 
     def is_token_valid(self):
-        # Consider token valid if it expires in more than 2 minutes
-        return self.token and (self.token_expiry - time.time() > 120)
+        # Consider token valid if it expires in more than TOKEN_EXPIRY_BUFFER_SECONDS
+        return self.token and (self.token_expiry - time.time() > self.TOKEN_EXPIRY_BUFFER_SECONDS)
 
     def get_token(self):
         if self.is_token_valid():
