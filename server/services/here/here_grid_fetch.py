@@ -12,11 +12,12 @@ LAT_RANGE = 0.4  # ~45km N-S
 LON_RANGE = 0.7  # ~70km E-W
 RADIUS_KM = 10
 STEP_KM = 8
+KM_PER_DEGREE_LATITUDE = 111  # Approximate kilometers per degree of latitude
 
 
 def generate_grid(center_lat, center_lon, lat_range, lon_range, step_km):
-    lat_step = step_km / 111
-    lon_step = step_km / (111 * math.cos(math.radians(center_lat)))
+    lat_step = step_km / KM_PER_DEGREE_LATITUDE
+    lon_step = step_km / (KM_PER_DEGREE_LATITUDE * math.cos(math.radians(center_lat)))
     lat_points = int(lat_range / lat_step) + 1
     lon_points = int(lon_range / lon_step) + 1
     grid = []
