@@ -14,8 +14,11 @@ def create_access_token(subject: dict, expires_delta: timedelta = None) -> (str,
     if expires_delta:
         expire = datetime.utcnow() + expires_delta
     else:
-        expire = datetime.utcnow() + timedelta(minutes=configs.ACCESS_TOKEN_EXPIRE_MINUTES)
-    payload = {"exp": expire, **subject}
+        expire = datetime.utcnow() + timedelta(
+            minutes=configs.ACCESS_TOKEN_EXPIRE_MINUTES
+        )
+    payload = {"exp": expire, "token_type": "access", **subject}
+
     encoded_jwt = jwt.encode(payload, configs.SECRET_KEY, algorithm=ALGORITHM)
     expiration_datetime = expire.strftime(configs.DATETIME_FORMAT)
     return encoded_jwt, expiration_datetime
@@ -23,9 +26,23 @@ def create_access_token(subject: dict, expires_delta: timedelta = None) -> (str,
 
 def decode_jwt(token: str) -> dict:
     try:
-        decoded_token = jwt.decode(token, configs.SECRET_KEY, algorithms=ALGORITHM)
-        return decoded_token if decoded_token["exp"] >= int(round(datetime.utcnow().timestamp())) else None
-    except Exception:
+        decoded_token = jwt.decode(token, configs.SECRET_KEY, algorithms=[ALGORITHM])
+        return (
+            decoded_token
+            if decoded_token["exp"] >= int(round(datetime.utcnow().timestamp()))
+            else None
+        )
+    except jwt.InvalidSignatureError as e:
+        print(f"JWT Invalid Signature error: {e}")
+        return {}
+    except jwt.ExpiredSignatureError as e:
+        print(f"JWT Expired Signature error: {e}")
+        return {}
+    except jwt.InvalidTokenError as e:
+        print(f"JWT Invalid Token error: {e}")
+        return {}
+    except Exception as e:
+        print(f"JWT decode error: {e}")  # Added debugging to see the actual error
         return {}
 
 
@@ -34,7 +51,9 @@ class JWTBearer(HTTPBearer):
         super(JWTBearer, self).__init__(auto_error=auto_error)
 
     async def __call__(self, request: Request):
-        credentials: HTTPAuthorizationCredentials = await super(JWTBearer, self).__call__(request)
+        credentials: HTTPAuthorizationCredentials = await super(
+            JWTBearer, self
+        ).__call__(request)
         if credentials:
             if not credentials.scheme == "Bearer":
                 raise AuthError(detail="Invalid authentication scheme.")

@@ -2,12 +2,10 @@ from typing import Any
 
 from dependency_injector.wiring import inject
 from fastapi import Depends
-from jose import jwt
 from pydantic import ValidationError
 
-from app.core.config import configs
 from app.core.exceptions import AuthError
-from app.core.security import ALGORITHM, JWTBearer
+from app.core.security import JWTBearer, decode_jwt
 
 
 @inject
@@ -16,9 +14,14 @@ def validate_token(
 ) -> dict[str, Any]:
 
     try:
-        payload = jwt.decode(token, configs.SECRET_KEY, algorithms=ALGORITHM)
-        if payload["token_type"] != "access":
+        payload = decode_jwt(token)
+        print("Decoded payload:", payload)  # Debugging line
+
+        if not payload:  # decode_jwt returns {} or None if invalid
+            raise AuthError(detail="Could not validate credentials")
+
+        if payload.get("token_type") != "access":
             raise AuthError(detail="Invalid token type")
         return payload
-    except (jwt.JWTError, ValidationError):
+    except (ValidationError,):
         raise AuthError(detail="Could not validate credentials")
